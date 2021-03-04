@@ -53,5 +53,49 @@ sayHello("Hello", 'Bell')
 sayHello2('heheh', 3, 5)
 
 
-// let myName = 'Sugi';
-// myName = 'bell'
+let newName : string | number | boolean = "Sugi"
+newName = 'belle'
+newName = 10
+newName = 10
+
+console.log(newName);
+
+// Union Types with /
+
+const makeMargin = (x: string | number): string => {
+      return `margin: ${x}px`
+}
+
+makeMargin(10);
+makeMargin(false)
+
+// Null Types
+
+let dog: string | undefined = "Sammy"
+
+dog = null
+
+console.log('dog', dog);
+
+dog = "Lucie"
+dog = undefined
+
+
+// Interfaces
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+
+
+const sayName = ({name, age}: Person): string => {
+    console.log(name);
+
+    return name
+    
+}
+
+
+sayName({name: "sugi", age: 26})

@@ -175,8 +175,37 @@ function sayHello2(word) {
 }
 
 sayHello("Hello", 'Bell');
-sayHello2('heheh', 3, 5); // let myName = 'Sugi';
-// myName = 'bell'
+sayHello2('heheh', 3, 5);
+var newName = "Sugi";
+newName = 'belle';
+newName = 10;
+newName = 10;
+console.log(newName); // Union Types with /
+
+var makeMargin = function makeMargin(x) {
+  return "margin: " + x + "px";
+};
+
+makeMargin(10);
+makeMargin(false); // Null Types
+
+var dog = "Sammy";
+dog = null;
+console.log('dog', dog);
+dog = "Lucie";
+dog = undefined;
+
+var sayName = function sayName(_a) {
+  var name = _a.name,
+      age = _a.age;
+  console.log(name);
+  return name;
+};
+
+sayName({
+  name: "sugi",
+  age: 26
+});
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
