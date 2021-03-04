@@ -1,3 +1,4 @@
+import Job, { Person, Type, Type2 } from './src/Interfaces';
 
 
 
@@ -83,10 +84,6 @@ dog = undefined
 
 // Interfaces
 
-interface Person {
-    name: string;
-    age?: string; //? Optional param
-}
 
 
 
@@ -107,11 +104,7 @@ sayName({name: "sugi"})
 
 //Numeric Enum
 
-enum Type {
-    Video, //0
-    BlogPost, //1
-    Quiz //2
-}
+
 
 const createContent = (contentType: Type) => {
 
@@ -126,14 +119,35 @@ console.log(Type.Quiz);
 
 // String Enum
 
-enum Type2 {
-    Video = 'VIDEO',
-    BlogPost = 'BLOG_POST',
-    Quiz = 'QUIZ'
-}
 
 const createContent2 = (contentType: Type2) => {}
 
 createContent2(Type2.Quiz)
 
 console.log(Type2.Quiz);
+
+//Object oriented programming
+// Classes
+
+class Team {
+
+   teamName: string;
+//   public  teamName: string; same as the above
+//  private teamName: string; prevent outside usage
+//   readonly teamName: string; Prevent from being changed
+
+constructor(teamName: string) {
+    this.teamName = teamName;
+}
+
+    score() : string {
+        console.log(this.teamName);
+        return 'goal'
+        
+    }
+}
+
+
+const redWings = new Team('Red Wings');
+redWings.score()
+redWings.teamName

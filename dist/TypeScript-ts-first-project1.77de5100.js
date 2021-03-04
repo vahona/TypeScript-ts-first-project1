@@ -117,7 +117,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.ts":[function(require,module,exports) {
+})({"src/Interfaces.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Type2 = exports.Type = void 0;
+var Type;
+
+(function (Type) {
+  Type[Type["Video"] = 0] = "Video";
+  Type[Type["BlogPost"] = 1] = "BlogPost";
+  Type[Type["Quiz"] = 2] = "Quiz"; //2
+})(Type = exports.Type || (exports.Type = {}));
+
+exports.default = Job;
+var Type2;
+
+(function (Type2) {
+  Type2["Video"] = "VIDEO";
+  Type2["BlogPost"] = "BLOG_POST";
+  Type2["Quiz"] = "QUIZ";
+})(Type2 = exports.Type2 || (exports.Type2 = {}));
+},{}],"index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var Interfaces_1 = require("./src/Interfaces");
+
 console.log('Hello world');
 var isOpen = false;
 var myName = "Sugi";
@@ -193,7 +224,7 @@ var dog = "Sammy";
 dog = null;
 console.log('dog', dog);
 dog = "Lucie";
-dog = undefined;
+dog = undefined; // Interfaces
 
 var sayName = function sayName(_a) {
   var name = _a.name,
@@ -214,32 +245,39 @@ sayName({
 }); // Enums
 //Numeric Enum
 
-var Type;
-
-(function (Type) {
-  Type[Type["Video"] = 0] = "Video";
-  Type[Type["BlogPost"] = 1] = "BlogPost";
-  Type[Type["Quiz"] = 2] = "Quiz"; //2
-})(Type || (Type = {}));
-
 var createContent = function createContent(contentType) {};
 
-createContent(Type.Quiz);
-console.log(Type.Quiz); // String Enum
-
-var Type2;
-
-(function (Type2) {
-  Type2["Video"] = "VIDEO";
-  Type2["BlogPost"] = "BLOG_POST";
-  Type2["Quiz"] = "QUIZ";
-})(Type2 || (Type2 = {}));
+createContent(Interfaces_1.Type.Quiz);
+console.log(Interfaces_1.Type.Quiz); // String Enum
 
 var createContent2 = function createContent2(contentType) {};
 
-createContent2(Type2.Quiz);
-console.log(Type2.Quiz);
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+createContent2(Interfaces_1.Type2.Quiz);
+console.log(Interfaces_1.Type2.Quiz); //Object oriented programming
+// Classes
+
+var Team =
+/** @class */
+function () {
+  //   public  teamName: string; same as the above
+  //  private teamName: string; prevent outside usage
+  //   readonly teamName: string; Prevent from being changed
+  function Team(teamName) {
+    this.teamName = teamName;
+  }
+
+  Team.prototype.score = function () {
+    console.log(this.teamName);
+    return 'goal';
+  };
+
+  return Team;
+}();
+
+var redWings = new Team('Red Wings');
+redWings.score();
+redWings.teamName;
+},{"./src/Interfaces":"src/Interfaces.ts"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
