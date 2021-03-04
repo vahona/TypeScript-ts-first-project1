@@ -1,0 +1,22 @@
+{
+  "name": "typescript-ts-first-project1",
+  "version": "1.0.0",
+  "description": "TypeScript-ts-first-project1",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vahona/TypeScript-ts-first-project1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vahona/TypeScript-ts-first-project1/issues"
+  },
+  "homepage": "https://github.com/vahona/TypeScript-ts-first-project1#readme",
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  }
+}
