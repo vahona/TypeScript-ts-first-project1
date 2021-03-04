@@ -85,7 +85,7 @@ dog = undefined
 
 interface Person {
     name: string;
-    age: number;
+    age?: string; //? Optional param
 }
 
 
@@ -98,4 +98,42 @@ const sayName = ({name, age}: Person): string => {
 }
 
 
-sayName({name: "sugi", age: 26})
+sayName({name: "sugi", age: "26"})
+sayName({ age: "26"})
+sayName({name: "sugi"})
+
+
+// Enums
+
+//Numeric Enum
+
+enum Type {
+    Video, //0
+    BlogPost, //1
+    Quiz //2
+}
+
+const createContent = (contentType: Type) => {
+
+}
+
+
+
+createContent(Type.Quiz)
+
+console.log(Type.Quiz);
+
+
+// String Enum
+
+enum Type2 {
+    Video = 'VIDEO',
+    BlogPost = 'BLOG_POST',
+    Quiz = 'QUIZ'
+}
+
+const createContent2 = (contentType: Type2) => {}
+
+createContent2(Type2.Quiz)
+
+console.log(Type2.Quiz);

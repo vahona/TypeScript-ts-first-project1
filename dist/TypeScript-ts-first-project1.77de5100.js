@@ -204,8 +204,41 @@ var sayName = function sayName(_a) {
 
 sayName({
   name: "sugi",
-  age: 26
+  age: "26"
 });
+sayName({
+  age: "26"
+});
+sayName({
+  name: "sugi"
+}); // Enums
+//Numeric Enum
+
+var Type;
+
+(function (Type) {
+  Type[Type["Video"] = 0] = "Video";
+  Type[Type["BlogPost"] = 1] = "BlogPost";
+  Type[Type["Quiz"] = 2] = "Quiz"; //2
+})(Type || (Type = {}));
+
+var createContent = function createContent(contentType) {};
+
+createContent(Type.Quiz);
+console.log(Type.Quiz); // String Enum
+
+var Type2;
+
+(function (Type2) {
+  Type2["Video"] = "VIDEO";
+  Type2["BlogPost"] = "BLOG_POST";
+  Type2["Quiz"] = "QUIZ";
+})(Type2 || (Type2 = {}));
+
+var createContent2 = function createContent2(contentType) {};
+
+createContent2(Type2.Quiz);
+console.log(Type2.Quiz);
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
