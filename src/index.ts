@@ -151,3 +151,13 @@ constructor(teamName: string) {
 const redWings = new Team('Red Wings');
 redWings.score()
 redWings.teamName
+
+
+// Generics
+
+const outputInput = <T>(arg: T): T => {
+    return arg
+}
+
+const output = outputInput('hi')
+outputInput(3)
