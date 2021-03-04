@@ -4,7 +4,9 @@
   "description": "TypeScript-ts-first-project1",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "tsc": "tsc"
+
   },
   "repository": {
     "type": "git",

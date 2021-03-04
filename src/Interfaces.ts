@@ -12,7 +12,7 @@ export enum Type {
 }
 
 
-export default Job
+// export default Job
 
 
 export enum Type2 {

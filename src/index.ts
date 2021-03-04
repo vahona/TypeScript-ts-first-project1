@@ -1,4 +1,4 @@
-import Job, { Person, Type, Type2 } from './src/Interfaces';
+import { Person, Type, Type2 } from './Interfaces';
 
 
 
