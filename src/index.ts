@@ -161,3 +161,23 @@ const outputInput = <T>(arg: T): T => {
 
 const output = outputInput('hi')
 outputInput(3)
+
+
+// Duck Typing
+
+
+class Dancer implements Person {
+    name: string;
+    age?: string;
+}
+
+let ElNino: Person = new Dancer();
+
+
+const fake = {
+    name: 'Sugi',
+    year: 30
+}
+
+
+ElNino = fake
